@@ -1,1 +1,96 @@
-/**SOME RANDOM COMMENTS**/
+/**COLOR SCHEME **/
+body{
+ margin: 0em; 
+ padding: 0em; 
+ font-family: "Segoe UI", "Helvetica", "sans-erif"; 
+ background: linear-gradient(#2083bf,#55efc4);
+ overflow: hidden; 
+}
+.hero-header{
+
+}
+
+h1{
+    margin-block-start: 0em; 
+}
+
+.title-h1{
+    text-align: CENTER; 
+    color: white; 
+    padding-top: 30px; 
+    font-weight: 300; 
+}
+
+.title-h1-big{
+    text-align: CENTER;
+    color: white;
+    font-size: 100px;
+    letter-spacing: 20px;
+    font-weight: 300;
+}
+
+.post-container{
+    margin: 0px 30px;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    padding: 10px;
+    background: #ffffffb8;
+    display: inline-flex;
+    min-width: 29%;
+    min-height: 200px;
+    max-width: 30%;
+    transition: 0.7s; 
+}
+
+.hero-ul{
+ list-style-type: none; 
+ position: absolute; 
+ top: 10px; 
+ right: 15px;  
+}
+
+.hero-li{
+  color: white; 
+  display: inline-flex; 
+  margin: 0px 10px; 
+}
+
+.hero-li:hover{
+  cursor: pointer; 
+}
+
+.post-container:hover{
+    transform: scale(1.01);
+    box-shadow: 0.1px 0.1px 10px #fff;
+    cursor: pointer; 
+}
+
+.pc-img{
+    width: 150px;
+    height: 200px;
+    margin-right: 20px;
+}
+
+.pc-title{
+    font-weight: 300;
+}
+
+.pc-para{
+ margin-top: -15px;
+}
+
+.user-pc{
+
+}
+
+.user-pc-pic{
+
+}
+
+.user-pc-uname{
+
+}
+
+.user-pc-desc{
+
+}
