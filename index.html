@@ -2,9 +2,11 @@
 <html> 
   <head> 
      <title> Twiz | Official Site </title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
      <link rel = "stylesheet" href = "main.css">
   </head> 
   <body style = 'margin: 0em; '>
+    <div class = "vignette"> </div>
      <div class = 'hero'> 
          <div class = 'hero-header'>        
              <h1 class = 'title-h1'> Welcome to </h1>  
@@ -14,6 +16,33 @@
                  <li class = "hero-li"> Log In </li>
                  <li class = "hero-li"> About </li>
              </ul>
+             <div id='post-button'> 
+                 New Post
+             </div>
+                  <div class = 'popup-newpost'>
+                    <div id = 'exit-button'>x</div>
+                    <ol class = 'popup-ul'>
+                    <h1 style = "    text-align: center;
+                                    font-weight: 100;
+                                    margin-left: -30px;" > 
+                                    Bring attention to a new concern</h1>
+                    <form onsubmit="postItem();">
+                        <li class = 'popup-li'> 
+                            <label class = 'popup-label'>What is happening in your community?</label> <br> 
+                            <input class = 'popup-input' id="post-title" type = 'text' placeholder = 'Enter a short title that properly describes the project'>
+                        </li>
+                        <li class = 'popup-li'>
+                            <label class = 'popup-label'>Tell the community more about this problem </label> <br> 
+                            <textarea class = 'popup-textarea' id="post-body" placeholder = 'Tell everyone a little more about what is happening'> </textarea>  
+                        </li>
+                        <li class = 'popup-li'> 
+                            <label class = 'popup-label'> Upload a picture to show what is happening</label> <br>
+                            <input type="file" class="file-select" id="post-img" accept="image/*"/>
+                        </li>
+                        <input type = "submit" value = "Post" id = "post-button-inner"> 
+                    </form>
+                    </ol>
+                </div> <!--END OF NEW POST-->
          </div>
      </div> <!-- END OF THE HERO CLASS -->
      <div class = "container-fluid">
@@ -30,4 +59,39 @@
         </div>
      </div> <!--END OF CONTAINER FLUID -->
   </body> 
+  <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyBZG-adn5PbAnTmrEb2qSaPdorEa2TfcEE",
+    authDomain: "twiz-lahacks-1553980546121.firebaseapp.com",
+    databaseURL: "https://twiz-lahacks-1553980546121.firebaseio.com",
+    projectId: "twiz-lahacks-1553980546121",
+    storageBucket: "twiz-lahacks-1553980+546121.appspot.com",
+    messagingSenderId: "808356596994"
+    };
+    firebase.initializeApp(config);
+    //everything else after this 
+    $("#exit-button").on('click', function() {
+      $(".popup-newpost").css({"display":"none"}); 
+      $(".vignette").css({"display":"none"}); 
+    }); 
+
+    $("#post-button").on('click', function(){
+         $(".vignette").css({"display":"block"});   
+         $(".popup-newpost").css({"display":"block"});  
+    }); 
+
+    $("#post-button-inner").on('click', function() {
+         postItem(); 
+    }); 
+
+    function postItem(){ 
+      var postTitle = document.getElementById("post-title").value; 
+      var postBody = document.getElementById("post-body").value; 
+      
+
+    }
+
+    </script>
 </html> 

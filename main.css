@@ -5,10 +5,9 @@ body{
  font-family: "Segoe UI", "Helvetica", "sans-erif"; 
  background: linear-gradient(#2083bf,#55efc4);
  overflow: hidden; 
+ overflow-y: scroll; 
 }
-.hero-header{
 
-}
 
 h1{
     margin-block-start: 0em; 
@@ -33,6 +32,7 @@ h1{
     margin: 0px 30px;
     border-radius: 10px;
     margin-bottom: 60px;
+    margin-top: 75px; 
     padding: 10px;
     background: #ffffffb8;
     display: inline-flex;
@@ -53,6 +53,7 @@ h1{
   color: white; 
   display: inline-flex; 
   margin: 0px 10px; 
+  font-weight: 100; 
 }
 
 .hero-li:hover{
@@ -79,18 +80,101 @@ h1{
  margin-top: -15px;
 }
 
-.user-pc{
-
+#post-button{
+    border: 1px solid #fff;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    color: white;
+    text-align: Center;
+    vertical-align: middle;
+    font-size: 25px;
+    font-weight: 100;
+    padding-top: 10px;
+    margin-top: -30px; 
+    transition: background 0.7s; 
+    transition: color 0.7s; 
 }
 
-.user-pc-pic{
-
+#post-button:hover{
+  cursor: pointer;
+  background: white;
+  color: #2083bf;
 }
 
-.user-pc-uname{
-
+.popup-newpost{
+     position: absolute;
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fffffff7;
+    left: 50%; 
+    transform: translateX(-50%);
+    top: 20%; 
+    display: none; 
 }
 
-.user-pc-desc{
+.popup-li{
+ margin-bottom: 20px; 
+}
 
+.popup-input{
+    width: 90%;
+    font-size: 20px;
+    font-family: inherit; 
+}
+
+.popup-textarea{
+   width: 90%; 
+   font-size: 20px; 
+   font-family: inherit; 
+   resize: none; 
+   margin-top: 15px; 
+   height: 100px; 
+}
+
+.file-select{
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+#post-button-inner{
+    padding: 10px 30px;
+    font-size: 20px;
+    border: 1px solid #2083bf;
+    background: none;
+    color: #2083bf;
+    border-radius: 5px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+#post-button-inner:hover{
+    cursor: pointer;
+    background: #eee
+}
+
+.vignette{
+    height: 100vh;
+    position: absolute;
+    width: -webkit-fill-available;
+    background: #111;
+    opacity: 0.6; 
+    display: none; 
+}
+
+#exit-button{
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    transition: transform 0.7s; 
+}
+
+#exit-button:hover{
+    cursor: pointer; 
+    transform: scale(1.1); 
 }
